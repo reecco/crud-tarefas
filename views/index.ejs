@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="box-form">
+        <h2>Adicionar Tarefa</h1>
+        <form class="form-tarefa" action="/save" method="POST">
+          <input type="text" name="tarefa" id="input-tarefa">
+          <button class="btn-tarefa">Adicionar</button>
+        </form>
+      </div>
+      <div class="divisao">
+        <div class="linha"></div>
+      </div>
+      <div class="box-tarefas">
+        <h2>Lista de Tarefas</h2>
+        <ul class="lista-tarefas">
+          <% tarefas.forEach(tarefa=> { %>
+            <li class="tarefa">
+              <form class="form-edit" action="/del" method="post">
+                <span><%= tarefa.descricao %></span>
+                <input type="hidden" name="id" value="<%= tarefa.id %>">
+                <button class="btn-deletar">
+                  <img class="icon-deletar" src="/images/deletar.png">
+                </button>
+              </form>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f0f0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 30%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.form-tarefa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+}
+
+#input-tarefa {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  width: 200px;
+  height: 40px;
+  border: 1px solid rgb(179, 176, 176);
+}
+
+.btn-tarefa {
+  margin-top: 5%;
+  border-radius: 10px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: #FEFEFE;
+  border: none;
+  background-color: rgb(179, 176, 176);
+  transition: .2s;
+}
+
+.btn-tarefa:hover {
+  opacity: 0.7;
+}
+
+.btn-tarefa:active {
+  background-color: rgb(124, 120, 120);
+}
+
+.divisao {
+  display: flex;
+  flex-direction: column;
+}
+
+.linha {
+  border: 1px solid rgb(179, 176, 176);
+  padding: 20vh 0;
+  margin: 20vh;
+}
+
+.lista-tarefas {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100px;
+  list-style-type: none;
+}
+
+.tarefa {
+  margin: 5px;
+}
+
+.form-edit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-deletar {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  transition: .3s;
+}
+
+.btn-deletar:hover {
+  scale: 1.1;
+}
+
+.btn-deletar:active {
+  scale: 0.9;
+}
+
+.icon-editar, .icon-deletar {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
